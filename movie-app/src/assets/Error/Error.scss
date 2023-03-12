@@ -1,0 +1,25 @@
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -135%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 150px;
+  border-radius: 10%;
+  border: 2px #ce2a2a solid;
+  background-color: #565151;
+  p {
+
+  }
+  button {
+    style: none;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(5%, 5%);
+
+  }
+}

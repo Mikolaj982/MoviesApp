@@ -1,0 +1,108 @@
+html, body > #root {
+  margin: 0;
+  height: 100%;
+  .container {
+    height: 100%;
+    background-color: #565151;
+    color: white;
+    font-family: "Noto Sans";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__sign-up-container {
+      background-color: #1a1818;
+      width: 760px;
+      height: 600px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: row;
+      padding: 0 0 0 40px;
+      justify-content: space-between;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.30) 20px 20px 10px;
+      img {
+        width: 400px;
+        margin: 15px 15px 15px 0;
+        border-radius: 20px;
+      }
+      &__form-container {
+        h1 {
+          line-height: 45px;
+          font-size: 35px;
+        }
+        p {
+          color: gray;
+          font-size: 15px;
+          text-transform: uppercase;
+          margin: 50px 0 30px;
+        }
+        &__link {
+          display: flex;
+          flex-direction: row;
+          p {
+            color: #a19a9a;
+            font-size: 15px;
+            text-transform: none;
+            margin: 30px 0 15px;
+          }
+          a {
+            margin: 30px 0 30px 8px;
+            font-size: 15px;
+            color: #d33d3d;
+            text-transform: none;
+            cursor: pointer;
+          }
+        }
+        &__form {
+          display: flex;
+          flex-direction: column;
+          width: 275px;
+          div {
+            justify-content: space-between;
+            display: flex;
+            div {
+              display: flex;
+              flex-direction: column;
+              margin: 10px 0 0 0;
+            }
+            input {
+              width: 130px;
+            }
+          }
+          label {
+            color: grey;
+            margin: 0 0 7px 10px;
+            font-size: 13px;
+          }
+          input {
+            background-color: grey;
+            border-radius: 20px;
+            border-style: none;
+            height: 37px;
+            padding: 10px;
+            margin-bottom: 10px;
+          }
+          button {
+            font-weight: bold;
+            color: white;
+            background-color: #d5552e;
+            border-radius: 20px;
+            width: 135px;
+            height: 41px;
+            border-style: none;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+            &:hover {
+              color: #2f73d9;
+              background-color: #d9aa42;
+            }
+            &:active {
+              color: black;
+              background-color: #d5552e;
+            }
+        }
+      }
+      }
+    }
+  }
+}
