@@ -1,0 +1,259 @@
+.main-page-container__nav-container {
+  background-image: linear-gradient(to bottom, transparent 70%, black),
+  url("https://wallpapercave.com/wp/wp5549067.jpg");
+  background-position: center;
+  height: 460px;
+  background-size: cover;
+
+  &__nav {
+    z-index: 1;
+    border-top: solid 20px black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+
+    &__content {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      flex-wrap: wrap;
+      font-weight: 600;
+
+      &__links {
+        margin-left: 30px;
+        display: flex;
+
+        svg {
+          display: none;
+        }
+
+        a {
+          font-size: 12px;
+          margin-right: 3px;
+          position: relative;
+          top: 4px;
+          margin-left: 1px;
+          text-transform: uppercase;
+          color: white;
+          cursor: pointer;
+          text-decoration: none;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 0;
+            background-color: white;
+            height: 2px;
+            margin-top: 2px;
+            transition: width 0.3s;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+
+      &__avatar {
+        margin-right: 40px;
+        height: 25px;
+        width: 25px;
+        border-radius: 20px;
+        background-color: blue;
+        background-image: url("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png");
+        background-size: cover;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__popular-movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    margin-left: 10px;
+    padding-top: 100px;
+
+    h1 {
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  &__buttons-container {
+    display: flex;
+    margin-top: 30px;
+
+    button:first-child {
+      border-style: none;
+      border-radius: 20px;
+      width: 100px;
+      height: 35px;
+      background-color: #8331c5;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      &:hover {
+        color: #d33d3d;
+        background-color: #1a1818;
+      }
+    }
+
+    button:last-child {
+      margin-left: 15px;
+      border-radius: 20px;
+      width: 100px;
+      height: 35px;
+      background-color: white;
+      color: black;
+      border-style: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      &:hover {
+        color: white;
+        background-color: #1a1818;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-page-container__nav-container {
+    background-image: linear-gradient(to bottom, transparent 70%, black),
+    url("https://wallpapercave.com/wp/wp5549067.jpg");
+    background-position: right;
+    height: 460px;
+    background-size: cover;
+
+    &__nav {
+      z-index: 1;
+      border-top: solid 20px black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: auto;
+      width: 100%;
+
+      &__content {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        font-weight: 600;
+
+        &__links {
+          margin-left: 30px;
+          display: flex;
+
+          svg {
+            display: block;
+          }
+
+          a {
+            font-size: 15px;
+            margin-right: 17px;
+            position: relative;
+            top: 4px;
+            margin-left: 1px;
+            text-transform: uppercase;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+
+            &::after {
+              content: '';
+              display: block;
+              width: 0;
+              background-color: white;
+              height: 2px;
+              margin-top: 2px;
+              transition: width 0.3s;
+            }
+
+            &:hover::after {
+              width: 100%;
+            }
+          }
+        }
+
+        &__avatar {
+          margin-right: 40px;
+          height: 25px;
+          width: 25px;
+          border-radius: 20px;
+          background-color: blue;
+          background-image: url("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png");
+          background-size: cover;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__popular-movie {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 400px;
+      margin-left: 70px;
+      padding-top: 100px;
+
+      h1 {
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+
+    &__buttons-container {
+      display: flex;
+      margin-top: 30px;
+
+      button:first-child {
+        border-style: none;
+        border-radius: 20px;
+        width: 100px;
+        height: 35px;
+        background-color: #8331c5;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+          color: #d33d3d;
+          background-color: #1a1818;
+        }
+      }
+
+      button:last-child {
+        margin-left: 15px;
+        border-radius: 20px;
+        width: 100px;
+        height: 35px;
+        background-color: white;
+        color: black;
+        border-style: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+          color: white;
+          background-color: #1a1818;
+        }
+      }
+    }
+  }
+}

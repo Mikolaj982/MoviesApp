@@ -1,0 +1,206 @@
+html, body > #root {
+  margin: 0;
+  height: 100%;
+  .container {
+    height: 100%;
+    background-color: #565151;
+    color: white;
+    font-family: "Noto Sans";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__sign-in-container {
+      background-color: #1a1818;
+      height: 40rem;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: row;
+      padding: 35px;
+      justify-content: space-between;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.30) 20px 20px 10px;
+
+      img {
+        position: fixed;
+        visibility: hidden;
+      }
+
+      &__form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 240px;
+        p {
+          font-size: 13px;
+          position: absolute;
+          top: 100px;
+          color: #a19a9a;
+          a {
+            margin-left: 10px;
+            color: #d33d3d;
+            text-transform: none;
+            cursor: pointer;
+          }
+        }
+
+        h1 {
+          line-height: 45px;
+          font-size: 35px;
+          margin-bottom: 20px;
+        }
+
+        &__form {
+          margin-top: 35px;
+          display: flex;
+          flex-direction: column;
+          //width: 275px;
+
+          label {
+            color: gray;
+            margin: 0 0 7px 10px;
+            font-size: 13px;
+          }
+
+          input {
+            background-color: grey;
+            border-radius: 20px;
+            border-style: none;
+            height: 37px;
+            padding: 10px;
+            margin-bottom: 20px;
+            //width: 130px;
+          }
+
+          button {
+            font-weight: bold;
+            color: white;
+            background-color: #d5552e;
+            border-radius: 20px;
+            width: 135px;
+            height: 41px;
+            border-style: none;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+
+            &:hover {
+              color: #2f73d9;
+              background-color: #d9aa42;
+            }
+
+            &:active {
+              color: black;
+              background-color: #d5552e;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html, body > #root {
+    //margin: 0;
+    //height: 100%;
+    .container {
+      //height: 100%;
+      //background-color: #565151;
+      //color: white;
+      //font-family: "Noto Sans";
+      //display: flex;
+      //justify-content: center;
+      //align-items: center;
+      &__sign-in-container {
+        //background-color: #1a1818;
+        width: 760px;
+        height: 600px;
+        //border-radius: 20px;
+        //display: flex;
+        //flex-direction: row;
+        padding: 0 0 0 40px;
+        //justify-content: space-between;
+        //box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.30) 20px 20px 10px;
+
+        img {
+          visibility: visible;
+          position: initial;
+          display: block;
+          width: 400px;
+          margin: 15px 15px 15px 0;
+          border-radius: 20px;
+        }
+
+        &__form-container {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          p {
+            font-size: 13px;
+            position: absolute;
+            top: 50px;
+            color: #a19a9a;
+            a {
+              margin-left: 10px;
+              color: #d33d3d;
+              text-transform: none;
+              cursor: pointer;
+            }
+          }
+
+          h1 {
+            line-height: 45px;
+            font-size: 35px;
+          }
+
+          &__form {
+            margin-top: 50px;
+            //display: flex;
+            //flex-direction: column;
+            width: 275px;
+
+            label {
+              //color: gray;
+              //margin: 0 0 7px 10px;
+              //font-size: 13px;
+            }
+
+            input {
+              //background-color: grey;
+              //border-radius: 20px;
+              //border-style: none;
+              //height: 37px;
+              //padding: 10px;
+              margin-bottom: 10px;
+            }
+
+            button {
+              //font-weight: bold;
+              //color: white;
+              //background-color: #d5552e;
+              //border-radius: 20px;
+              //width: 135px;
+              //height: 41px;
+              //border-style: none;
+              //cursor: pointer;
+              margin-top: 15px;
+              //transition: 0.3s;
+
+              //&:hover {
+              //  color: #2f73d9;
+              //  background-color: #d9aa42;
+              //}
+              //
+              //&:active {
+              //  color: black;
+              //  background-color: #d5552e;
+              //}
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

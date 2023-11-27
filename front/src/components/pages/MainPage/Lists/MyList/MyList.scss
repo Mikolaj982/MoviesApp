@@ -1,0 +1,27 @@
+.my-list-container {
+  background-color: black;
+
+  &__movies-list {
+    margin: 50px 30px;
+
+    &__image {
+      border-radius: 6px;
+      margin: 10px;
+      box-shadow: #46525f 2px 15px 30px -10px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: #78818b 2px 27px 21px -7px;
+      }
+    }
+
+    &__prev-button {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+    }
+
+  }
+}
