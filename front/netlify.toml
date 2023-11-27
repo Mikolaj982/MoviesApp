@@ -3,7 +3,13 @@
   publish = "build"
 
 [[redirects]]
-  from = "/api-22l1barku-mikolajs-projects.vercel.app/*"
-  to = "https://api-22l1barku-mikolajs-projects.vercel.app/:splat"
+  from = "/api-ytdrr2dj8-mikolajs-projects.vercel.app/*"
+  to = "https://api-ytdrr2dj8-mikolajs-projects.vercel.app/:splat"
   status = 200
-   headers = { Access-Control-Allow-Origin = "https://coruscating-dusk-0c8d64.netlify.app", Access-Control-Allow-Headers = "Content-Type", Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS" }
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+      Access-Control-Allow-Origin = "*"
+      Access-Control-Allow-Methods = "GET, POST, PUT, OPTIONS"
+      Access-Control-Allow-Headers = "Content-Type, Authorization"
