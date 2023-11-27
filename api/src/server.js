@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json({limit: '25mb'}));
 app.use(cors({
-    origin: "api-22l1barku-mikolajs-projects.vercel.app ",
+    origin: "api-22l1barku-mikolajs-projects.vercel.app",
     credentials: true,
 }));
 app.use(passport.initialize());
