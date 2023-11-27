@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json({limit: '25mb'}));
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "*",
     credentials: true,
 }));
 app.use(passport.initialize());
