@@ -31,7 +31,7 @@ export const MainPage = ({
     const {error, handleError, resetError} = useErrorHandler();
 
     useEffect(() => {
-        fetch(`http://localhost:8000/my-list`, {
+        fetch(`api-eg4ce7ilv-mikolajs-projects.vercel.app/my-list`, {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json',
