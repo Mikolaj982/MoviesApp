@@ -45,16 +45,12 @@ export const App = () => {
                 }
             })
                 .then(res => res.json()
-                    // if (!res.ok) {
-                    //     throw new Error('HTTP Error.')
-                    // }
                 )
                 .then(data => {
                     setIsLoading(false);
                     setMoviesData(data.results);
                 })
-                .catch((e) => {
-                    // console.error('Error:', e);
+                .catch(() => {
                     setIsLoading(false);
                     return handleError('Błąd pobierania danych');
                 })
