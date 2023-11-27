@@ -7,7 +7,7 @@ const {v4: uuidv4} = require("uuid");
 const jwt = require("jsonwebtoken");
 const localStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
-const pako = require('pako');
+const port = process.env.PORT || 8000;
 const app = express();
 
 mongoose.connect("mongodb+srv://random-user:5HU2WxkWHMam2NcH@cluster0.21d6ogu.mongodb.net/?retryWrites=true&w=majority", {
@@ -169,53 +169,7 @@ app.get('/my-list', (req, res) => {
     })
 })
 
-
-// app.get('/avatar', (req, res) => {
-//     const auth = req.headers.authorization;
-//     const token = auth.substring(7);
-//     jwt.verify(token, 'TOP_SECRET', {}, (error, decoded) => {
-//         if (error) {
-//             res.status(404).json({message: error});
-//         } else {
-//             User.findById(decoded.user._id)
-//                 .then(user => {
-//                     if (!user.image) {
-//                         res.status(404).json({message: 'Image not found.'});
-//                         return;
-//                     }
-//
-//                     const base64String = Buffer.from(user.image).toString('base64');
-//
-//                     res.setHeader('Content-Type', 'image/jpg');
-//                     return res.status(200).send(base64String);
-//                 })
-//         }
-//     })
-// })
-
-// app.post('/upload-avatar', async (req, res) => {
-//     const {compressedImage} = req.body.toString();
-//     const auth = req.headers.authorization;
-//     const token = auth.substring(7);
-//     jwt.verify(token, 'TOP_SECRET', {}, (error, decoded) => {
-//         if (error) {
-//             res.status(404).json({message: 'Cannot upload avatar. Try again later'});
-//             return;
-//         } else {
-//             User.findById(decoded.user._id)
-//                 .then(user => {
-//                     const uint8Array = Uint8Array.from(atob(compressedImage), c => c.charCodeAt(0));
-//                     const compressedUint8Array = pako.gzip(uint8Array);
-//                     const compressedBase64 = btoa(String.fromCharCode(...new Uint8Array(compressedUint8Array.buffer)));
-//                     user.image = compressedBase64;
-//                     user.save();
-//                 })
-//         }
-//     })
-//     res.sendStatus(200);
-// })
-
-app.listen(8000, () => {
+app.listen(port, () => {
     console.log('Server has started')
 });
 
