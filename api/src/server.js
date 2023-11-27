@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json({limit: '25mb'}));
 app.use(cors({
-    origin: "https://api-22l1barku-mikolajs-projects.vercel.app",
+    origin: "https://main--coruscating-dusk-0c8d64.netlify.app",
     credentials: true,
 }));
 app.use(passport.initialize());
