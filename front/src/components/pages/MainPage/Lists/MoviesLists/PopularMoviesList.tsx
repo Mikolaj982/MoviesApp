@@ -30,7 +30,10 @@ export const PopularMoviesList:
                         />
                     </CarouselItem>
                 );
-                }})}
+                } else {
+                    return null;
+                }
+             })}
             )
         </Carousel>
     </>

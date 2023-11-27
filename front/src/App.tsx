@@ -2,10 +2,9 @@ import './index.scss'
 import {SignUp} from "./components/pages/SignUp/SignUp";
 import {SignIn} from "./components/pages/SignIn/SignIn";
 import {MainPage} from './components/pages/MainPage/MainPage';
-import {Route, Routes} from "react-router-dom";
+import {Route, Routes, useNavigate} from "react-router-dom";
 import {MovieDetails} from "./components/pages/MainPage/MovieDetails/MovieDetails";
 import React, {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
 import {SearchInput} from "./components/pages/MainPage/SearchInput/SearchInput";
 import {MyList} from "./components/pages/MainPage/Lists/MyList/MyList";
 import {VideoPlayer} from "./assets/Video/Video";
@@ -52,7 +51,7 @@ export const App = () => {
                 })
                 .catch(() => {
                     setIsLoading(false);
-                    return handleError('Błąd pobierania danych');
+                    handleError('Błąd pobierania danych');
                 })
     }, []);
 

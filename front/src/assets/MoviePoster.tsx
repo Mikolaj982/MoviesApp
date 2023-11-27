@@ -1,5 +1,4 @@
-import React, {MouseEventHandler} from "react";
-import {useEffect, useState} from "react";
+import React, {MouseEventHandler, useEffect, useState} from "react";
 import image from '../../src/assets/img/image-not-found.jpg';
 import {MovieDataProps} from "../App";
 

@@ -1,5 +1,4 @@
-import React from "react";
-import {useEffect} from "react";
+import React, {useEffect}from "react";
 import './MainPage.scss'
 import {Loading} from "../../../assets/Loading/Loading";
 import {MovieDataProps} from "../../../App";
@@ -60,7 +59,7 @@ export const MainPage = ({
                 }
                 console.log('pobrana lista danego użytkownika:', myList)
             })
-    }, []);
+    }, [handleError, moviesData, myList, setMyList]);
 
     return <>
         {error && <ErrorHandler message={error} onClose={resetError}/>}

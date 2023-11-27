@@ -33,28 +33,7 @@ export const MovieDetails = ({
                 setAdded(true);
             }
         }
-    }, [])
-
-    // const fetchMyList = (method: string, movie: MovieDataProps) => {
-    //     return fetch(`http://localhost:8000/my-list`, {
-    //         method: method,
-    //         headers: {
-    //             'Content-type': 'application/json',
-    //             Accept: 'application/json',
-    //             Authorization: `Bearer ${localStorage.getItem('token')}`,
-    //         },
-    //         body: JSON.stringify({myMovie: movie}),
-    //     })
-    //         .then(async (res) => {
-    //             const response = await res.json();
-    //             if (!res.ok) {
-    //                 console.log('error in fetch')
-    //             } else {
-    //                 console.log('movie added');
-    //                 return response;
-    //             }
-    //         })
-    // }
+    }, [movie, myList])
 
     const handleFavMovie = (movie: MovieDataProps | null) => {
         if (!myList.includes(movie as MovieDataProps)) {

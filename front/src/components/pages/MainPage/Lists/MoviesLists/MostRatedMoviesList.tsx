@@ -1,5 +1,4 @@
 import React from "react";
-import {MovieDataProps} from "../../../../../App";
 import {Carousel} from "../../../../../assets/Carousel/Carousel";
 import {CarouselItem} from "../../../../../assets/Carousel/CarouselItem";
 
@@ -11,8 +10,9 @@ interface MostRatedMoviesProps {
 export const MostRatedMoviesList = ({movies, onMovieClick}: MostRatedMoviesProps): JSX.Element => {
     const sortedByRating = movies && movies.sort((a, b) => {
        if (a.tmdb_vote_average && b.tmdb_vote_average) {
-           (b.tmdb_vote_average - a.tmdb_vote_average).toString();
+           return (b.tmdb_vote_average - a.tmdb_vote_average).toString();
        }
+       return 0;
     });
 
     const topMovies = sortedByRating && sortedByRating.slice(0, 10);
@@ -35,6 +35,8 @@ export const MostRatedMoviesList = ({movies, onMovieClick}: MostRatedMoviesProps
                             />
                         </CarouselItem>
                     );
+                } else {
+                    return null;
                 }
             })}
         </Carousel>

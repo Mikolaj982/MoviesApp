@@ -4,11 +4,6 @@ import './SearchInput.scss'
 import SearchBox from 'react-search-box';
 import {BackIcon} from '../../../../assets/BackIcon/BackIcon';
 
-interface SearchInput {
-    movies: MovieDataProps[],
-    onMovieClick: () => void,
-}
-
 export const SearchInput: React.FC<{ movies: MovieDataProps[], onMovieClick: any }> = ({movies, onMovieClick}) => {
 
     const data = movies && [...movies].map((obj, index) => {
