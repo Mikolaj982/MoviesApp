@@ -70,7 +70,7 @@ export const MovieDetails = ({
                         console.log('error in fetch')
                     } else {
                         console.log('movie deleted');
-                        setMyList([...myList].filter(item => item != movie));
+                        setMyList([...myList].filter(item => item !== movie));
                     }
                 })
         }
