@@ -53,7 +53,7 @@ export const App = () => {
                     setIsLoading(false);
                     handleError('Błąd pobierania danych');
                 })
-    }, []);
+    }, [handleError]);
 
     const handleMovieInfo = (movie: MovieDataProps): void => {
         setMovieInfo(movie);
