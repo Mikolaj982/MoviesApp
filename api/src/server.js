@@ -92,7 +92,7 @@ passport.use(
     )
 )
 
-app.post('/login', async (req, res, next) => {
+app.post('/login', cors(), async (req, res, next) => {
     passport.authenticate('login', async (error, user, info) => {
         console.log('err', error);
         console.log('user', user);
@@ -107,7 +107,7 @@ app.post('/login', async (req, res, next) => {
     })(req, res, next)
 });
 
-app.post('/signup', async (req, res, next) => {
+app.post('/signup', cors(), async (req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'https://coruscating-dusk-0c8d64.netlify.app');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
