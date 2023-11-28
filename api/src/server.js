@@ -63,6 +63,7 @@ passport.use(
     new localStrategy(
         {
             usernameField: 'email',
+            passwordField: 'password',
         },
         async (email, password, done) => {
             console.log('passport working')
