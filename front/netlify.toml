@@ -7,6 +7,7 @@
   to = "https://api-782zqbtav-mikolajs-projects.vercel.app/:splat"
   status = 200
 
+
 [[headers]]
   for = "/*"
     [headers.values]
