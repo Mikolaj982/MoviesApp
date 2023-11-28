@@ -22,10 +22,10 @@ app.use(bodyParser.urlencoded({
     limit: '25mb',
 }));
 app.use(bodyParser.json({limit: '25mb'}));
-app.use(cors({
-    origin: "https://main--coruscating-dusk-0c8d64.netlify.app",
-    credentials: true,
-}));
+app.use(cors());
+    // origin: "https://main--coruscating-dusk-0c8d64.netlify.app",
+    // credentials: true,
+
 app.use(passport.initialize());
 
 passport.use(
@@ -92,7 +92,7 @@ passport.use(
     )
 )
 
-app.post('/login', cors(), async (req, res, next) => {
+app.post('/login', async (req, res, next) => {
     passport.authenticate('login', async (error, user, info) => {
         console.log('err', error);
         console.log('user', user);
@@ -107,10 +107,10 @@ app.post('/login', cors(), async (req, res, next) => {
     })(req, res, next)
 });
 
-app.post('/signup', cors(), async (req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://coruscating-dusk-0c8d64.netlify.app');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+app.post('/signup', async (req, res, next) => {
+    // res.header('Access-Control-Allow-Origin', 'https://coruscating-dusk-0c8d64.netlify.app');
+    // res.header('Access-Control-Allow-Headers', 'Content-Type');
+    // res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     passport.authenticate('signup', async (error, user, info) => {
         if (error) return next(error.message);
         if (!user) return res.status(401).send(info);
@@ -171,9 +171,9 @@ app.get('/my-list', (req, res) => {
         }
     })
 })
-app.options('/signup', cors());
-app.options('/login', cors());
-app.options('/my-list', cors());
+// app.options('/signup', cors());
+// app.options('/login', cors());
+// app.options('/my-list', cors());
 
 app.listen(port, () => {
     console.log('Server has started')
