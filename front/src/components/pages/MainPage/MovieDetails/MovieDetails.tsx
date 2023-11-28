@@ -56,7 +56,7 @@ export const MovieDetails = ({
                 })
         }
         if (myList.includes(movie as MovieDataProps)) {
-            fetch(`https://api-7xcd4bq3v-mikolajs-projects.vercel.app/my-list`, {
+            fetch(`https://api-782zqbtav-mikolajs-projects.vercel.app/my-list`, {
                 method: 'DELETE',
                 headers: {
                     'Content-type': 'application/json',
