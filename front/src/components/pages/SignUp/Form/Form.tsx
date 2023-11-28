@@ -30,7 +30,8 @@ export const Form: React.FC = () => {
                     email: signUpData.email,
                     password: signUpData.password,
                 }
-            )
+            ),
+            credentials: "include"
         })
             .then(async (res) => {
                 console.log(res)
