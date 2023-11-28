@@ -22,7 +22,7 @@ export const SignIn: React.FC = () => {
 
     const onSubmit = (e: React.SyntheticEvent ) => {
         e.preventDefault()
-        fetch('https://api-bgybn09wh-mikolajs-projects.vercel.app/login', {
+        fetch('https://api-7xcd4bq3v-mikolajs-projects.vercel.app/login', {
             method: "POST",
             headers: {
                 "Accept":"application/json",
