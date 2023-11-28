@@ -7,9 +7,9 @@
   to = "https://api-7xcd4bq3v-mikolajs-projects.vercel.app/:splat"
   status = 200
 
-# [[headers]]
-#   for = "/*"
-#     [headers.values]
-#       Access-Control-Allow-Origin = "*"
-#       Access-Control-Allow-Methods = "GET, POST, PUT, OPTIONS"
-#       Access-Control-Allow-Headers = "Content-Type, Authorization"
+[[headers]]
+  for = "/*"
+    [headers.values]
+      Access-Control-Allow-Origin = "*"
+      Access-Control-Allow-Methods = "GET, POST, PUT, OPTIONS"
+      Access-Control-Allow-Headers = "Content-Type, Authorization"
