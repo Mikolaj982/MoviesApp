@@ -22,10 +22,10 @@ app.use(bodyParser.urlencoded({
     limit: '25mb',
 }));
 app.use(bodyParser.json({limit: '25mb'}));
-app.use(cors());
-    // origin: "https://main--coruscating-dusk-0c8d64.netlify.app",
-    // credentials: true,
-
+app.use(cors({
+    origin: "https://main--coruscating-dusk-0c8d64.netlify.app",
+    credentials: true,
+}))
 app.use(passport.initialize());
 
 passport.use(
