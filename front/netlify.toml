@@ -3,8 +3,8 @@
   publish = "build"
 
 [[redirects]]
-  from = "/api-ytdrr2dj8-mikolajs-projects.vercel.app/*"
-  to = "https://api-ytdrr2dj8-mikolajs-projects.vercel.app/:splat"
+  from = "/api-mu6yx5c45-mikolajs-projects.vercel.app/*"
+  to = "https://api-mu6yx5c45-mikolajs-projects.vercel.app/:splat"
   status = 200
 
 [[headers]]

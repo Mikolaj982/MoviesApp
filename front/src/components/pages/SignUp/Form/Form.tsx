@@ -20,7 +20,7 @@ export const Form: React.FC = () => {
 
     const onSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault()
-        fetch('https://api-ytdrr2dj8-mikolajs-projects.vercel.app/signup', {
+        fetch('https://api-mu6yx5c45-mikolajs-projects.vercel.app/signup', {
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -31,7 +31,7 @@ export const Form: React.FC = () => {
                     password: signUpData.password,
                 }
             ),
-            credentials: "include"
+            credentials:"include"
         })
             .then(async (res) => {
                 console.log(res)
