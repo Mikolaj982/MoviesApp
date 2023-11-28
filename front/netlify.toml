@@ -3,13 +3,13 @@
   publish = "build"
 
 [[redirects]]
-  from = "/api-oqbi9k503-mikolajs-projects.vercel.app/*"
-  to = "https://api-oqbi9k503-mikolajs-projects.vercel.app/:splat"
+  from = "/api-g9t1c4hde-mikolajs-projects.vercel.app/*"
+  to = "https://api-g9t1c4hde-mikolajs-projects.vercel.app/:splat"
   status = 200
 
-[[headers]]
-  for = "/*"
-    [headers.values]
-      Access-Control-Allow-Origin = "*"
-      Access-Control-Allow-Methods = "GET, POST, PUT, OPTIONS"
-      Access-Control-Allow-Headers = "Content-Type, Authorization"
+# [[headers]]
+#   for = "/*"
+#     [headers.values]
+#       Access-Control-Allow-Origin = "*"
+#       Access-Control-Allow-Methods = "GET, POST, PUT, OPTIONS"
+#       Access-Control-Allow-Headers = "Content-Type, Authorization"
