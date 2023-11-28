@@ -3,7 +3,7 @@
   publish = "build"
 
 [[redirects]]
-  from = "/api-g9t1c4hde-mikolajs-projects.vercel.app/*"
+  from = "/api-git-main-mikolajs-projects.vercel.app/*"
   to = "https://api-g9t1c4hde-mikolajs-projects.vercel.app/:splat"
   status = 200
 
