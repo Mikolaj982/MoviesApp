@@ -171,6 +171,9 @@ app.get('/my-list', (req, res) => {
         }
     })
 })
+app.options('/signup', cors());
+app.options('/login', cors());
+app.options('/my-list', cors());
 
 app.listen(port, () => {
     console.log('Server has started')
