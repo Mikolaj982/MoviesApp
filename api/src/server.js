@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const port = process.env.PORT || 8000;
 const app = express();
 
-mongoose.connect("mongodb+srv://random-user:5HU2WxkWHMam2NcH@cluster0.21d6ogu.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://random-user:JjmAhOSh0QwRMg4Z@cluster0.wungeuw.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
