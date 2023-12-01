@@ -20,7 +20,7 @@ export const Form: React.FC = () => {
 
     const onSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault()
-        fetch('https://api-173cennza-mikolajs-projects.vercel.app/signup', {
+        fetch('https://api-k32jafidc-mikolajs-projects.vercel.app/signup', {
             method: "POST",
             headers: {
                 "Accept": "application/json",
