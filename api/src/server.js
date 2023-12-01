@@ -32,7 +32,10 @@ app.use(passport.initialize());
 passport.use(
     'login',
     new localStrategy(
-        {usernameField: 'email'},
+        {
+            usernameField: 'email',
+            passwordField: 'password'
+        },
         async (email, password, done) => {
             console.log('user named');
             try {
