@@ -69,7 +69,6 @@ passport.use(
             console.log('passport working')
             try {
                 if (password.length <= 4 || !email) {
-                    console.log('tu wpada')
                     done(null, false, {message: 'email is required and password has to be more than 4 signs'})
                 } else {
                     User.findOne({email: email}).then((user) => {

@@ -26,7 +26,6 @@ export const Form: React.FC = () => {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
             },
-            mode: 'no-cors',
             body: JSON.stringify({
                     email: signUpData.email,
                     password: signUpData.password,
