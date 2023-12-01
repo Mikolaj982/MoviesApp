@@ -127,7 +127,7 @@ app.post('/signup',  (req, res, next) => {
         if (!user) return res.status(401).send(info);
         if (user) {
             console.log(`Saving user: ${user}`)
-            user.save();
+            await user.save();
             return res.status(200).send(info);
         }
     })(req, res, next)
