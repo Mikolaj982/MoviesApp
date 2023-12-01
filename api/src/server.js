@@ -11,7 +11,8 @@ const port = process.env.PORT || 8000;
 const app = express();
 mongoose.connect("mongodb+srv://random-user:JjmAhOSh0QwRMg4Z@cluster0.wungeuw.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    autoIndex: false
 }).then(() => {
     console.log('Mongoose is connected')
 });
