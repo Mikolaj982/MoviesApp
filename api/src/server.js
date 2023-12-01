@@ -36,7 +36,7 @@ passport.use(
             usernameField: 'email',
             passwordField: 'password'
         },
-        async (email, password, done) => {
+        (email, password, done) => {
             console.log('user named');
             try {
                 if (email === 'apperror') {
