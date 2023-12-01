@@ -99,8 +99,8 @@ passport.use(
     )
 )
 
-app.post('/login', async (req, res, next) => {
-    passport.authenticate('login', async (error, user, info) => {
+app.post('/login', (req, res, next) => {
+    passport.authenticate('login', (error, user, info) => {
         console.log('err', error);
         console.log('user', user);
         console.log('info', info);
