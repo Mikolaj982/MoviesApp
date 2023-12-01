@@ -28,6 +28,7 @@ export const SignIn: React.FC = () => {
                 "Accept":"application/json",
                 "Content-Type": "application/json",
             },
+            mode: 'no-cors',
             body: JSON.stringify({
                     email: signInData.email,
                     password: signInData.password,
