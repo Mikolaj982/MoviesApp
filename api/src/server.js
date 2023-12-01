@@ -108,6 +108,14 @@ app.post('/login', async (req, res, next) => {
     })(req, res, next)
 });
 
+app.options("/signup", async (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Methods', '*')
+    res.header('Access-Control-Allow-Headers', '*')
+    res.status(200).end()
+    return
+})
+
 app.post('/signup', async (req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', '*')
