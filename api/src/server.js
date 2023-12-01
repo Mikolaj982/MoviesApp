@@ -23,7 +23,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json({limit: '25mb'}));
 app.use(cors({
-    origin: "https://main--coruscating-dusk-0c8d64.netlify.app",
+    // origin: "https://main--coruscating-dusk-0c8d64.netlify.app",
+    origin: "*",
     credentials: true,
 }))
 app.use(passport.initialize());
@@ -69,6 +70,7 @@ passport.use(
             console.log('passport working')
             try {
                 if (password.length <= 4 || !email) {
+                    console.log('tu wpada')
                     done(null, false, {message: 'email is required and password has to be more than 4 signs'})
                 } else {
                     User.findOne({email: email}).then((user) => {
@@ -109,7 +111,6 @@ app.post('/login', async (req, res, next) => {
 });
 
 app.post('/signup', async (req, res, next) => {
-    res.status(200).send(req);
     passport.authenticate('signup', async (error, user, info) => {
         if (error) return next(error.message);
         if (!user) return res.status(401).send(info);
