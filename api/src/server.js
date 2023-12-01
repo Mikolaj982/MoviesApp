@@ -138,6 +138,9 @@ app.post('/signup',  (req, res, next) => {
 })
 
 app.post('/my-list', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Methods', '*')
+    res.header('Access-Control-Allow-Headers', '*')
     const auth = req.headers.authorization;
     const token = auth.substring(7);
     jwt.verify(token, 'TOP_SECRET', {}, (error, decoded) => {
@@ -155,6 +158,9 @@ app.post('/my-list', async (req, res) => {
 })
 
 app.delete('/my-list', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Methods', '*')
+    res.header('Access-Control-Allow-Headers', '*')
     const auth = req.headers.authorization;
     const token = auth.substring(7);
     jwt.verify(token, 'TOP_SECRET', {}, (error, decoded) => {
