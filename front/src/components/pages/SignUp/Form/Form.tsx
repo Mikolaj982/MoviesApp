@@ -43,7 +43,7 @@ export const Form: React.FC = () => {
             })
             .catch((err) => {
                 console.error('Network error:', err)
-                handleError('Server problems. Try again later.')
+                handleError('Server problems. Try again later!')
             });
     }
     const handleSignUpData = (e: React.ChangeEvent<HTMLInputElement>): void => {
