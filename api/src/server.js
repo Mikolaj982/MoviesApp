@@ -104,7 +104,7 @@ app.post('/login', async (req, res, next) => {
         if (!user) return res.status(401).send(info);
         if (user) {
             const token = jwt.sign({user: user}, 'TOP_SECRET');
-            console.log('token', token);
+            console.log('token1', token);
             return res.status(200).send({token, info, user});
         }
     })(req, res, next)
