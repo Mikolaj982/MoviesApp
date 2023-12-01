@@ -110,6 +110,8 @@ app.post('/login', async (req, res, next) => {
 
 app.post('/signup', async (req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Methods', '*')
+    res.header('Access-Control-Allow-Headers', '*')
     passport.authenticate('signup', async (error, user, info) => {
         if (error) return next(error.message);
         if (!user) return res.status(401).send(info);
