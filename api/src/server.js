@@ -80,8 +80,10 @@ passport.use(
                                 password: password,
                                 image: null,
                             })
+                            console.log("User has been created")
                             return done(null, newUser, {message: 'Signed up successfully'})
                         } else {
+                            console.log("User already exists")
                             return done(null, false, {message: 'User already exist'})
                         }
                     })
@@ -124,6 +126,7 @@ app.post('/signup',  (req, res, next) => {
         if (error) return next(error.message);
         if (!user) return res.status(401).send(info);
         if (user) {
+            console.log(`Saving user: ${user}`)
             user.save();
             return res.status(200).send(info);
         }
