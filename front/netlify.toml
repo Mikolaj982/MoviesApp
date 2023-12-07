@@ -8,9 +8,9 @@
 #   status = 200
 
 
-[[headers]]
-  for = "/*"
-    [headers.values]
-      Access-Control-Allow-Origin = "https://coruscating-dusk-0c8d64.netlify.app"
-      Access-Control-Allow-Methods = "GET, POST, PUT, OPTIONS"
-      Access-Control-Allow-Headers = "Content-Type, Authorization"
+# [[headers]]
+#   for = "/*"
+#     [headers.values]
+#       Access-Control-Allow-Origin = "https://coruscating-dusk-0c8d64.netlify.app"
+#       Access-Control-Allow-Methods = "GET, POST, PUT, OPTIONS"
+#       Access-Control-Allow-Headers = "Content-Type, Authorization"
