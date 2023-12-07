@@ -59,7 +59,7 @@ export const Form: React.FC = () => {
             <h1>Create your account</h1>
             <div className='container__sign-up-container__form-container__link'>
                 <p>Already a member?</p>
-                <a href='/login'>Log in</a>
+                <a onClick={() => navigate('/login')}>Log in</a>
             </div>
             <form className='container__sign-up-container__form-container__form' onSubmit={onSubmit}>
                 <label htmlFor='email'>Email</label>
