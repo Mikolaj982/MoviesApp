@@ -59,7 +59,7 @@ export const MainPage = ({
                 }
                 console.log('pobrana lista danego użytkownika:', myList)
             })
-    }, [handleError, moviesData, myList, setMyList]);
+    }, [handleError]);
 
     return <>
         {error && <ErrorHandler message={error} onClose={resetError}/>}
