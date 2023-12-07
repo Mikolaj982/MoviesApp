@@ -2,10 +2,10 @@
   command = "npm install && npm run build"
   publish = "build"
 
-# [[redirects]]
-#   from = "/api-65mz3szb1-mikolajs-projects.vercel.app/*"
-#   to = "https://api-65mz3szb1-mikolajs-projects.vercel.app/:splat"
-#   status = 200
+[[redirects]]
+  from = "/api-theta-peach-12.vercel.app/*"
+  to = "https://api-theta-peach-12.vercel.app/:splat"
+  status = 200
 
 
 # [[headers]]
