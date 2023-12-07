@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useErrorHandler} from "../../../../hooks/useErrorHandler";
 import {ErrorHandler} from "../../../../assets/Error/ErrorHanlder";
 
@@ -59,7 +59,7 @@ export const Form: React.FC = () => {
             <h1>Create your account</h1>
             <div className='container__sign-up-container__form-container__link'>
                 <p>Already a member?</p>
-                <a onClick={() => navigate('/login')}>Log in</a>
+                <Link to={'/login'}>Log in</Link>
             </div>
             <form className='container__sign-up-container__form-container__form' onSubmit={onSubmit}>
                 <label htmlFor='email'>Email</label>
