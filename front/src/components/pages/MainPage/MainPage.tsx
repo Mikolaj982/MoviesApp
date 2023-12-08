@@ -30,7 +30,7 @@ export const MainPage = ({
     }
     const {error, handleError, resetError} = useErrorHandler();
 
-    const getMyList = useCallback(async() => {
+    const getMyList = async() => {
         try {
             fetch(`https://api-theta-peach-12.vercel.app/my-list`, {
                 method: 'GET',
@@ -62,18 +62,11 @@ export const MainPage = ({
                 } catch (e) {
             console.log('error!!!!:', e)
         }
-        }, [handleError, moviesData, myList, setMyList]);
+        }
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                await getMyList();
-            } catch (error) {
-                console.error('Wystąpił błąd podczas pobierania listy:', error);
-            }
-        };
-        fetchData().then(() => console.log('udało się'));
-    }, [getMyList])
+                getMyList().then(r => console.log('r:', r));
+    }, [])
 
     return <>
         {error && <ErrorHandler message={error} onClose={resetError}/>}
