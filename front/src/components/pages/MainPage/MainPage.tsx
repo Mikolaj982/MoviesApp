@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect} from "react";
+import React, {useEffect} from "react";
 import './MainPage.scss'
 import {Loading} from "../../../assets/Loading/Loading";
 import {MovieDataProps} from "../../../App";
@@ -29,6 +29,7 @@ export const MainPage = ({
         onSelectMovie(movie);
     }
     const {error, handleError, resetError} = useErrorHandler();
+
     useEffect(() => {
         const getMyList = async () => {
             try {
@@ -65,6 +66,7 @@ export const MainPage = ({
             }
         }
         getMyList().then(() => console.log('gotmylist'));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return <>
