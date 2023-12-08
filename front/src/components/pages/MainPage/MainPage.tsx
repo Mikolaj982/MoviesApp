@@ -1,4 +1,4 @@
-import React, {useEffect}from "react";
+import React, {useCallback, useEffect} from "react";
 import './MainPage.scss'
 import {Loading} from "../../../assets/Loading/Loading";
 import {MovieDataProps} from "../../../App";
@@ -30,36 +30,50 @@ export const MainPage = ({
     }
     const {error, handleError, resetError} = useErrorHandler();
 
-    useEffect(() => {
-        fetch(`https://api-theta-peach-12.vercel.app/my-list`, {
-            method: 'GET',
-            headers: {
-                'Content-type': 'application/json',
-                Accept: 'application/json',
-                Authorization: `Bearer ${localStorage.getItem('token')}`,
-            },
-        })
-            .then(async (res) => {
-                if (!res.ok) {
-                    const response = await res.json();
-                    handleError(response.message)
-                }
-                const response = await res.json()
-                const tempArray = [...myList];
-                console.log(response)
-                if (res.ok) {
-                    moviesData && moviesData.forEach((movie) => {
-                        if (!myList.includes(movie)) {
-                            if (response.some((id: number) => id === movie.id)) {
-                                tempArray.push(movie)
-                            }
-                        }
-                    })
-                    setMyList(tempArray)
-                }
-                console.log('pobrana lista danego użytkownika:', myList)
+    const getMyList = useCallback(async() => {
+        try {
+            fetch(`https://api-theta-peach-12.vercel.app/my-list`, {
+                method: 'GET',
+                headers: {
+                    'Content-type': 'application/json',
+                    Accept: 'application/json',
+                    Authorization: `Bearer ${localStorage.getItem('token')}`,
+                },
             })
-    }, [handleError]);
+                .then(async (res) => {
+                    if (!res.ok) {
+                        const response = await res.json();
+                        handleError(response.message)
+                    }
+                    const response = await res.json()
+                    const tempArray = [...myList];
+                    console.log(response)
+                    if (res.ok) {
+                        moviesData && moviesData.forEach((movie) => {
+                            if (!myList.includes(movie)) {
+                                if (response.some((id: number) => id === movie.id)) {
+                                    tempArray.push(movie)
+                                }
+                            }
+                        })
+                        setMyList(tempArray)
+                    }})
+                    console.log('pobrana lista danego użytkownika:', myList)
+                } catch (e) {
+            console.log('error!!!!:', e)
+        }
+        }, [handleError, moviesData, myList, setMyList]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                await getMyList();
+            } catch (error) {
+                console.error('Wystąpił błąd podczas pobierania listy:', error);
+            }
+        };
+        fetchData().then(() => console.log('udało się'));
+    }, [getMyList])
 
     return <>
         {error && <ErrorHandler message={error} onClose={resetError}/>}
