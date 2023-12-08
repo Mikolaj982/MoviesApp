@@ -29,43 +29,42 @@ export const MainPage = ({
         onSelectMovie(movie);
     }
     const {error, handleError, resetError} = useErrorHandler();
-
-    const getMyList = async() => {
-        try {
-            fetch(`https://api-theta-peach-12.vercel.app/my-list`, {
-                method: 'GET',
-                headers: {
-                    'Content-type': 'application/json',
-                    Accept: 'application/json',
-                    Authorization: `Bearer ${localStorage.getItem('token')}`,
-                },
-            })
-                .then(async (res) => {
-                    if (!res.ok) {
-                        const response = await res.json();
-                        handleError(response.message)
-                    }
-                    const response = await res.json()
-                    const tempArray = [...myList];
-                    console.log(response)
-                    if (res.ok) {
-                        moviesData && moviesData.forEach((movie) => {
-                            if (!myList.includes(movie)) {
-                                if (response.some((id: number) => id === movie.id)) {
-                                    tempArray.push(movie)
-                                }
-                            }
-                        })
-                        setMyList(tempArray)
-                    }})
-                    console.log('pobrana lista danego użytkownika:', myList)
-                } catch (e) {
-            console.log('error!!!!:', e)
-        }
-        }
-
     useEffect(() => {
-                getMyList().then(r => console.log('r:', r));
+        const getMyList = async () => {
+            try {
+                fetch(`https://api-theta-peach-12.vercel.app/my-list`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-type': 'application/json',
+                        Accept: 'application/json',
+                        Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    },
+                })
+                    .then(async (res) => {
+                        if (!res.ok) {
+                            const response = await res.json();
+                            handleError(response.message)
+                        }
+                        const response = await res.json()
+                        const tempArray = [...myList];
+                        console.log(response)
+                        if (res.ok) {
+                            moviesData && moviesData.forEach((movie) => {
+                                if (!myList.includes(movie)) {
+                                    if (response.some((id: number) => id === movie.id)) {
+                                        tempArray.push(movie)
+                                    }
+                                }
+                            })
+                            setMyList(tempArray)
+                        }
+                    })
+                console.log('pobrana lista danego użytkownika:', myList)
+            } catch (e) {
+                console.log('error!!!!:', e)
+            }
+        }
+        getMyList().then(() => console.log('gotmylist'));
     }, [])
 
     return <>
