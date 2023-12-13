@@ -1,47 +1,46 @@
 🇬🇧
-This application allows users to log in, register, manage their movie lists, and utilize an external API to retrieve movie information. 
-It leverages TypeScript, React, and Express.js for scalability, security, and responsiveness.
+# Movie Management Application 🎬
 
-Frontend (React in TypeScript):
-  The frontend of the application is built using React in conjunction with TypeScript, enabling strong typing and simplifying code refactoring. 
-The user interface is responsive and intuitive, allowing users to easily log in, register, and manage their movie lists.
+This application provides users with the ability to log in, register, and manage their movie lists, leveraging an external API for movie information. It is built with TypeScript, React, and Express.js, ensuring scalability, security, and responsiveness.
 
-Backend (Express.js with MongoDB):
-  The backend of the application is based on the Express.js framework and uses MongoDB as the database to store user data, such as login information and movie lists. 
-It provides an API that handles user-related operations and movie list management.
+## Technology Stack
+### Frontend (React in TypeScript)
+The frontend is developed using React in conjunction with TypeScript, allowing for strong typing and simplifying code refactoring. The user interface is responsive and intuitive, providing seamless log-in, registration, and movie list management.
 
-  App Features:
-	
-✔ Login and Registration: Users can log in and register, providing access to personalized features.
+### Backend (Express.js with MongoDB)
+The backend utilizes the Express.js framework and MongoDB as the database to store user data, including login information and movie lists. An API handles user-related operations and movie list management.
 
-✔ Movie List Management: Users can add and remove movies from their lists, and the application stores this information in the MongoDB database.
+## Key Features
+- **Login and Registration:** Users can securely log in and register, gaining access to personalized features.
+- **Movie List Management:** Easily add and remove movies from lists, with all data securely stored in the MongoDB database.
+- **Integration with External Movie API:** Connects to an external movie API, enabling users to retrieve information about a wide range of movies.
+- **Responsiveness:** The user interface is meticulously designed for responsiveness, ensuring a seamless experience across various devices.
 
-✔ Integration with External Movie API: The application connects to an external movie API, allowing users to retrieve information about various movies.
+Thanks to the robust combination of TypeScript, React, Express.js, and MongoDB, this application offers a comprehensive and secure environment for managing movie lists, seamlessly integrating with an external movie API to enhance the overall user experience. 🍿🎉
 
-✔ Responsiveness: The user interface is designed with responsiveness in mind, enabling usage across various devices.
+Demo: https://coruscating-dusk-0c8d64.netlify.app
 
-Thanks to the use of TypeScript, React, Express.js, and MongoDB, the application offers a comprehensive and secure environment for managing movie lists while integrating seamlessly with an external movie API for an enhanced user experience.
 
 ---------------------------------------------------------------------------------------------------------------------------------
 🇵🇱
-Ta aplikacja stanowi kompleksowe narzędzie, które pozwala użytkownikom na logowanie, rejestrację, zarządzanie swoją listą filmów oraz korzystanie z zewnętrznego API do pobierania informacji o filmach. Wykorzystuje ona TypeScript, React i Express.js, co gwarantuje skalowalność, bezpieczeństwo oraz responsywność.
+# Aplikacja do Zarządzania Filmami 🎬
 
-Frontend (React w TypeScript):
-	Frontend aplikacji został zbudowany przy użyciu React w połączeniu z TypeScript, co umożliwia silne typowanie oraz upraszcza refaktoryzację kodu. 
- Interfejs użytkownika jest responsywny i intuicyjny, pozwalając użytkownikom na łatwe logowanie, rejestrację oraz zarządzanie ich listą filmów.
+Ta aplikacja umożliwia użytkownikom logowanie się, rejestrację oraz zarządzanie listami filmów, wykorzystując zewnętrzne API do pobierania informacji o filmach. Została zbudowana z użyciem TypeScript, React i Express.js, zapewniając skalowalność, bezpieczeństwo i responsywność.
 
-Backend (Express.js z MongoDB):
-	Backend aplikacji opiera się na frameworku Express.js i wykorzystuje bazę danych MongoDB do przechowywania danych użytkowników, takich jak informacje o logowaniu i listach filmów. 
-Zapewnia on API, które obsługuje operacje związane z użytkownikami i ich listami filmów.
+## Stos Technologiczny
+### Frontend (React w TypeScript)
+Frontend został stworzony przy użyciu Reacta we współpracy z TypeScript, co pozwala na silne typowanie i upraszcza refaktoryzację kodu. Interfejs użytkownika jest responsywny i intuicyjny, umożliwiając łatwe logowanie, rejestrację oraz zarządzanie listami filmów.
 
-Funkcje aplikacji:
+### Backend (Express.js z MongoDB)
+Backend wykorzystuje framework Express.js i MongoDB jako bazę danych do przechowywania danych użytkowników, takich jak informacje o logowaniu i listy filmów. API obsługuje operacje związane z użytkownikami oraz zarządzaniem listami filmów.
 
-✔ Logowanie i Rejestracja: Użytkownicy mają możliwość logowania się oraz rejestracji, co umożliwia dostęp do spersonalizowanych funkcji.
+## Główne Funkcje
+- **Logowanie i Rejestracja:** Użytkownicy mogą bezpiecznie logować się i rejestrować, uzyskując dostęp do spersonalizowanych funkcji.
+- **Zarządzanie Listami Filmów:** Łatwe dodawanie i usuwanie filmów z list, a wszystkie dane są bezpiecznie przechowywane w bazie danych MongoDB.
+- **Integracja z Zewnętrznym API Filmowym:** Łączy się z zewnętrznym API filmowym, umożliwiając użytkownikom pobieranie informacji o różnych filmach.
+- **Responsywność:** Interfejs użytkownika jest starannie zaprojektowany z myślą o responsywności, zapewniając płynne doświadczenie na różnych urządzeniach.
 
-✔ Zarządzanie Listą Filmów: Użytkownicy mogą dodawać i usuwać filmy z własnej listy filmów, a aplikacja przechowuje te informacje w bazie danych MongoDB.
+Dzięki solidnemu połączeniu TypeScript, Reacta, Express.js i MongoDB, ta aplikacja oferuje kompleksowe i bezpieczne środowisko do zarządzania listami filmów, doskonale integrując się z zewnętrznym API filmowym, aby zwiększyć ogólne doświadczenie użytkownika. 🍿🎉
 
-✔ Integracja z Zewnętrznym API Filmowym: Aplikacja łączy się z zewnętrznym API filmowym, pozwalając użytkownikom na pobieranie informacji o różnych filmach.
+Demo: https://coruscating-dusk-0c8d64.netlify.app
 
-✔ Responsywność: Interfejs użytkownika został zaprojektowany z myślą o responsywności, umożliwiając korzystanie z aplikacji na różnych urządzeniach.
-
-Dzięki zastosowaniu TypeScript, React, Express.js oraz MongoDB, aplikacja oferuje kompleksowe i bezpieczne środowisko zarządzania listą filmów, jednocześnie integrując się z zewnętrznym API filmowym dla lepszego doświadczenia użytkownika.
