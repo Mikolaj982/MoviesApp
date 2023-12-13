@@ -1,5 +1,5 @@
 import React, {MouseEventHandler, useEffect, useState} from "react";
-import image from '../../src/assets/img/image-not-found.jpg';
+import image from '../img/image-not-found.jpg';
 import {MovieDataProps} from "../App";
 
 interface MoviePosterProps {
