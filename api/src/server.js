@@ -23,7 +23,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json({limit: '25mb'}));
 app.use(cors({
-    // origin: "https://main--coruscating-dusk-0c8d64.netlify.app",
     origin: "*",
     credentials: true,
 }))
@@ -37,7 +36,6 @@ passport.use(
             passwordField: 'password'
         },
         (email, password, done) => {
-            console.log('user named');
             try {
                 if (email === 'apperror') {
                     throw new Error(
@@ -70,7 +68,6 @@ passport.use(
             passwordField: 'password',
         },
         async (email, password, done) => {
-            console.log('passport working')
             try {
                 if (password.length <= 4 || !email) {
                     done(null, false, {message: 'email is required and password has to be more than 4 signs'})
@@ -84,10 +81,8 @@ passport.use(
                                 password: password,
                                 image: null,
                             })
-                            console.log("User has been created")
                             return done(null, newUser, {message: 'Signed up successfully'})
                         } else {
-                            console.log("User already exists")
                             return done(null, false, {message: 'User already exist'})
                         }
                     })
@@ -101,9 +96,6 @@ passport.use(
 
 app.post('/login', (req, res, next) => {
     passport.authenticate('login', (error, user, info) => {
-        console.log('err', error);
-        console.log('user', user);
-        console.log('info', info);
         if (error) return next(error.message);
         if (!user) return res.status(401).send(info);
         if (user) {
@@ -130,7 +122,6 @@ app.post('/signup',  (req, res, next) => {
         if (error) return next(error.message);
         if (!user) return res.status(401).send(info);
         if (user) {
-            console.log(`Saving user: ${user}`)
             await user.save();
             return res.status(200).send(info);
         }
@@ -193,9 +184,6 @@ app.get('/my-list', (req, res) => {
         }
     })
 })
-// app.options('/signup', cors());
-// app.options('/login', cors());
-// app.options('/my-list', cors());
 
 app.listen(port, () => {
     console.log('Server has started')
