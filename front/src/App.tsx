@@ -35,7 +35,7 @@ export const App = () => {
 
     useEffect(() => {
         setIsLoading(true);
-            fetch(`https://unelmamovie.com/api/v1/titles?perPage=20&page=1&order=popularity`, {
+            fetch(`https://unelmamovie.com/api/v1/search/movies?limit=60`, {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json',
@@ -51,7 +51,7 @@ export const App = () => {
                 })
                 .catch(() => {
                     setIsLoading(false);
-                    return handleError('Failed fetch data');
+                    handleError('Failed fetch data');
                 })
     }, [handleError]);
 
