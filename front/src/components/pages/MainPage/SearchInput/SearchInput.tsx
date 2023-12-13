@@ -24,7 +24,7 @@ export const SearchInput: React.FC<{ movies: MovieDataProps[], onMovieClick: any
                 onSelect={(record,) => {
                     findMovieData(record, movies);
                 }}
-                onChange={() => {}}
+                onChange={() => {return null}}
             />
         }
     </>
