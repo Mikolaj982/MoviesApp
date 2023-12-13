@@ -35,7 +35,7 @@ export const App = () => {
 
     useEffect(() => {
         setIsLoading(true);
-            fetch(`https://unelmamovie.com/api/v1/search/movie?limit=100`, {
+            fetch(`https://unelmamovie.com/api/v1/titles?perPage=20&page=1&order=popularity`, {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json',
