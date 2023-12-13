@@ -6,8 +6,9 @@ import {Link, useNavigate} from "react-router-dom";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import LogoutIcon from "@mui/icons-material/Logout";
 import './Navigation.scss';
+import {MovieDataProps} from "../../../../App";
 
-export const Navigation: React.FC<{ setMyList: any }> = ({setMyList}) => {
+export const Navigation: React.FC<{ setMyList: (myList: MovieDataProps[]) => void }> = ({setMyList}) => {
     const [added, setAdded] = useState(false)
     const navigate = useNavigate();
     return <>

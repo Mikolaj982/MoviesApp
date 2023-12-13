@@ -5,12 +5,14 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import DownloadDoneIcon from '@mui/icons-material/DownloadDone';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import './MovieDetails.scss';
+import {ErrorHandler} from "../../../../assets/Error/ErrorHanlder";
+import {useErrorHandler} from "../../../../hooks/useErrorHandler";
 
 interface MovieDetailsProps {
     myList: MovieDataProps[],
     setMyList: Dispatch<SetStateAction<MovieDataProps[]>>,
-    movie: any,
-    setMovieInfo: any,
+    movie: MovieDataProps | null,
+    setMovieInfo: Dispatch<SetStateAction<MovieDataProps | null>>,
 }
 
 export const MovieDetails = ({
@@ -21,6 +23,7 @@ export const MovieDetails = ({
                              }: MovieDetailsProps): JSX.Element => {
 
     const [added, setAdded] = useState(false);
+    const {error, handleError, resetError} = useErrorHandler()
     const navigate = useNavigate();
     const backToPreviousPage = () => {
         setMovieInfo(null)
@@ -48,9 +51,8 @@ export const MovieDetails = ({
             })
                 .then((res) => {
                     if (!res.ok) {
-                        console.log('error in fetch')
+                        handleError('Cannot save a movie. Try again later.')
                     } else {
-                        console.log('movie added');
                         movie && setMyList([...myList, movie])
                     }
                 })
@@ -67,16 +69,15 @@ export const MovieDetails = ({
             })
                 .then((res) => {
                     if (!res.ok) {
-                        console.log('error in fetch')
+                        handleError('Cannot delete a movie. Try again later.')
                     } else {
-                        console.log('movie deleted');
                         setMyList([...myList].filter(item => item !== movie));
                     }
                 })
         }
     }
 
-    return <>
+    return <>{error && <ErrorHandler message={error} onClose={resetError}/>}
         <div className='movie-details-container' style={{
             backgroundImage: `url(${movie ? movie.backdrop : ''})`
         }}>

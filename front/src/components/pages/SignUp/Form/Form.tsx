@@ -33,15 +33,13 @@ export const Form: React.FC = () => {
             ),
         })
             .then(async (res) => {
-                console.log(res)
                 if (!res.ok || res === null || res === undefined) {
                     return handleError('Server problems. Try again later.')
                 } else {
                     setIsRegistered(true);
                 }
             })
-            .catch((err) => {
-                console.error('Network error:', err)
+            .catch(() => {
                 handleError('Server problems. Try again later!')
             });
     }

@@ -10,9 +10,8 @@ export const SearchInput: React.FC<{ movies: MovieDataProps[], onMovieClick: any
         return { key: index.toString(), value: obj.name }
     });
 
-    const findMovieData = (record: any, arr: any) => {
-        const result = arr.find((obj: any) => obj.name === record.item.value) || null;
-        console.log(result);
+    const findMovieData = (record: any, arr: MovieDataProps[]) => {
+        const result = arr.find((obj) => obj.name === record.item.value) || null;
         onMovieClick(result);
     }
 
@@ -23,10 +22,9 @@ export const SearchInput: React.FC<{ movies: MovieDataProps[], onMovieClick: any
                 placeholder={'search'}
                 data={data}
                 onSelect={(record,) => {
-                    console.log(record);
                     findMovieData(record, movies);
                 }}
-                onChange={value => console.log(value)}
+                onChange={() => {}}
             />
         }
     </>

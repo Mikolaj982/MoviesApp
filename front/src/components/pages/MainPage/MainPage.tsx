@@ -60,9 +60,8 @@ export const MainPage = ({
                             setMyList(tempArray)
                         }
                     })
-                console.log('pobrana lista danego użytkownika:', myList)
             } catch (e) {
-                console.log('error!!!!:', e)
+                handleError(`${e}`)
             }
         }
         getMyList().then(() => console.log('gotmylist'));
