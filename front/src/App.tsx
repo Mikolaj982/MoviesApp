@@ -51,7 +51,7 @@ export const App = () => {
                 })
                 .catch(() => {
                     setIsLoading(false);
-                    handleError('Failed fetch data');
+                    return handleError('Failed fetch data');
                 })
     }, [handleError]);
 
