@@ -26,6 +26,7 @@ export const MyList: React.FC<{
                         <MoviePoster
                             movie={movie}
                             onClick={() => onMovieClick(movie)}
+                            className='my-list-container__movies-list__image'
                         />
                     </>
                 })}

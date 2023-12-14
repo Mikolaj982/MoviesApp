@@ -10,7 +10,8 @@ export const PopularMoviesList:
     onMovieClick: (movie: MovieDataProps) => void,
 }> = ({
               movies,
-              onMovieClick}) => {
+              onMovieClick
+}) => {
     const sortedByPopular = movies && movies.sort((a, b) => (b.popularity ?? 0) - (a.popularity ?? 0));
 
     return <>
@@ -22,6 +23,7 @@ export const PopularMoviesList:
                         <MoviePoster
                             movie={movie}
                             onClick={() => onMovieClick(movie)}
+                            className='img'
                         />
                     </CarouselItem>
                 );

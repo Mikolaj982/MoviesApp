@@ -5,9 +5,10 @@ import {MovieDataProps} from "../App";
 interface MoviePosterProps {
     movie: MovieDataProps,
     onClick: MouseEventHandler<HTMLImageElement> | undefined,
+    className: string,
 }
 
-export const MoviePoster = ({movie, onClick}: MoviePosterProps): JSX.Element => {
+export const MoviePoster = ({movie, onClick, className}: MoviePosterProps): JSX.Element => {
     const [imageSrc, setImageSrc] = useState(image);
 
     useEffect(() => {
@@ -25,7 +26,7 @@ export const MoviePoster = ({movie, onClick}: MoviePosterProps): JSX.Element => 
         <img
             onClick={onClick}
             src={imageSrc}
-            className='my-list-container__movies-list__image'
+            className={className}
             alt="Movie Poster"
             style={{
                 width: '160px',
