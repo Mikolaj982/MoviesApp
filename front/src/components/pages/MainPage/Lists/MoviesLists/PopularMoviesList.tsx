@@ -4,8 +4,7 @@ import {Carousel} from "../../../../../assets/Carousel/Carousel";
 import {CarouselItem} from "../../../../../assets/Carousel/CarouselItem";
 import {MoviePoster} from "../../../../../assets/MoviePoster";
 
-export const PopularMoviesList:
-    React.FC<{
+export const PopularMoviesList: React.FC<{
     movies: MovieDataProps[],
     onMovieClick: (movie: MovieDataProps) => void,
 }> = ({
@@ -23,7 +22,7 @@ export const PopularMoviesList:
                         <MoviePoster
                             movie={movie}
                             onClick={() => onMovieClick(movie)}
-                            className='img'
+                            tag='img'
                         />
                     </CarouselItem>
                 );

@@ -28,7 +28,7 @@ export const MostRatedMoviesList:React.FC<MostRatedMoviesProps> = ({movies, onMo
                             <MoviePoster
                                 movie={movie}
                                 onClick={() => onMovieClick(movie)}
-                                className='img'
+                                tag={'img'}
                             />
                         </CarouselItem>
                     );

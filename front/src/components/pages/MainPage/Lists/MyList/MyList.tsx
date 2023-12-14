@@ -11,7 +11,7 @@ export const MyList: React.FC<{
     onMovieClick: (movie: MovieDataProps) => void,
 }> = ({
                                myList,
-                               onMovieClick
+                               onMovieClick,
 }) => {
     const navigate = useNavigate();
     const backToPreviousPage = () => {
@@ -26,7 +26,7 @@ export const MyList: React.FC<{
                         <MoviePoster
                             movie={movie}
                             onClick={() => onMovieClick(movie)}
-                            className='my-list-container__movies-list__image'
+                            tag={'my-list-container__movies-list__image'}
                         />
                     </>
                 })}
