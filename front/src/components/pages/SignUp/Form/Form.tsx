@@ -33,8 +33,10 @@ export const Form: React.FC = () => {
             ),
         })
             .then(async (res) => {
-                if (!res.ok || res === null || res === undefined) {
-                    return handleError('Server problems. Try again later.')
+                if (!res.ok) {
+                    const data = await res.json();
+                    const msg = data.message;
+                    handleError(msg);
                 } else {
                     setIsRegistered(true);
                 }
