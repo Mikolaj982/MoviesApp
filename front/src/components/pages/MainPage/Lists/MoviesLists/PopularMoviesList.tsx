@@ -30,7 +30,6 @@ export const PopularMoviesList: React.FC<{
                     return null;
                 }
              })}
-            )
         </Carousel>
     </>
 }
