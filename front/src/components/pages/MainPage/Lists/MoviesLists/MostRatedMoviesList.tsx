@@ -1,7 +1,7 @@
 import React from "react";
 import {Carousel} from "../../../../../assets/Carousel/Carousel";
 import {CarouselItem} from "../../../../../assets/Carousel/CarouselItem";
-import image from '../../src/assets/img/image-not-found.jpg';
+import image from '../../../../../../src/assets/img/image-not-found.jpg';
 
 interface MostRatedMoviesProps {
     movies: any,

@@ -2,7 +2,7 @@ import React from "react";
 import {MovieDataProps} from "../../../../../App";
 import {Carousel} from "../../../../../assets/Carousel/Carousel";
 import {CarouselItem} from "../../../../../assets/Carousel/CarouselItem";
-import image from '../../src/assets/img/image-not-found.jpg';
+import image from '../../../../../../src/assets/img/image-not-found.jpg';
 
 export const PopularMoviesList:
     React.FC<{
