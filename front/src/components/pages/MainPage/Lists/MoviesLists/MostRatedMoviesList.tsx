@@ -1,6 +1,7 @@
 import React from "react";
 import {Carousel} from "../../../../../assets/Carousel/Carousel";
 import {CarouselItem} from "../../../../../assets/Carousel/CarouselItem";
+import image from '../../src/assets/img/image-not-found.jpg';
 
 interface MostRatedMoviesProps {
     movies: any,
@@ -26,7 +27,7 @@ export const MostRatedMoviesList = ({movies, onMovieClick}: MostRatedMoviesProps
                             <img
                                 onClick={() => onMovieClick(movie)}
                                 key={index}
-                                src={movie.poster}
+                                src={movie.poster ? movie.poster : image}
                                 alt={movie.name}
                                 style={{
                                     width: '150px',
