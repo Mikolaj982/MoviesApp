@@ -2,7 +2,7 @@ import React from "react";
 import {MovieDataProps} from "../../../../../App";
 import {Carousel} from "../../../../../assets/Carousel/Carousel";
 import {CarouselItem} from "../../../../../assets/Carousel/CarouselItem";
-import image from '../../../../../../src/assets/img/image-not-found.jpg';
+import {MoviePoster} from "../../../../../assets/MoviePoster";
 
 export const PopularMoviesList:
     React.FC<{
@@ -19,15 +19,9 @@ export const PopularMoviesList:
                 if (!movie.adult && movie.poster !== null) {
                 return (
                     <CarouselItem key={index}>
-                        <img
-                            onClick={() => {onMovieClick(movie);}}
-                            key={index}
-                            src={movie.poster ? movie.poster : image}
-                            alt={movie.name}
-                            style={{
-                                width: '150px',
-                                height: '220px',
-                            }}
+                        <MoviePoster
+                            movie={movie}
+                            onClick={() => onMovieClick(movie)}
                         />
                     </CarouselItem>
                 );

@@ -4,6 +4,7 @@ import {EmptyList} from "../EmptyList/EmptyList";
 import UndoIcon from '@mui/icons-material/Undo';
 import './MyList.scss';
 import {MovieDataProps} from '../../../../../App';
+import {MoviePoster} from "../../../../../assets/MoviePoster";
 
 export const MyList: React.FC<{
     myList: MovieDataProps[],
@@ -22,16 +23,9 @@ export const MyList: React.FC<{
             <div className='my-list-container__movies-list'>
                 {myList && myList.map((movie: MovieDataProps, index: number) => {
                     return <>
-                        <img
-                            onClick={() => {onMovieClick(movie)}}
-                            className='my-list-container__movies-list__image'
-                            key={index}
-                            src={movie.poster}
-                            alt={movie.name}
-                            style={{
-                                width: '160px',
-                                height: '220px',
-                            }}
+                        <MoviePoster
+                            movie={movie}
+                            onClick={() => onMovieClick(movie)}
                         />
                     </>
                 })}

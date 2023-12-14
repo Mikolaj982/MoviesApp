@@ -2,8 +2,15 @@ import React from 'react';
 import {PopularMoviesList} from "./PopularMoviesList";
 import {MostRatedMoviesList} from "./MostRatedMoviesList";
 import './MoviesLists.scss';
+import {MovieDataProps} from "../../../../../App";
 
-export const MoviesLists: React.FC<{ moviesData: any, handleMovieInfo: any }> = ({moviesData, handleMovieInfo}) => {
+export const MoviesLists: React.FC<{
+    moviesData: MovieDataProps[],
+    handleMovieInfo: (movie: MovieDataProps) => void
+}> = ({
+                                    moviesData,
+                                    handleMovieInfo
+}) => {
     return <>
         <div className='main-page-container__movie-lists'>
             <h3>Popular now</h3>

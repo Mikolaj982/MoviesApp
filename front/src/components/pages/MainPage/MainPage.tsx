@@ -64,7 +64,7 @@ export const MainPage = ({
                 handleError(`${e}`)
             }
         }
-        getMyList().then(() => console.log('gotmylist'));
+        getMyList().then(() => null);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
