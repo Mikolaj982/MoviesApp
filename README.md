@@ -27,7 +27,7 @@ Demo: https://coruscating-dusk-0c8d64.netlify.app
 
 Ta aplikacja umożliwia użytkownikom logowanie się, rejestrację oraz zarządzanie listami filmów, wykorzystując zewnętrzne API do pobierania informacji o filmach. Została zbudowana z użyciem TypeScript, React i Express.js, zapewniając skalowalność, bezpieczeństwo i responsywność.
 
-## Stos Technologiczny
+## Stack Technologiczny
 ### Frontend (React w TypeScript)
 Frontend został stworzony przy użyciu Reacta we współpracy z TypeScript, co pozwala na silne typowanie i upraszcza refaktoryzację kodu. Interfejs użytkownika jest responsywny i intuicyjny, umożliwiając łatwe logowanie, rejestrację oraz zarządzanie listami filmów.
 
