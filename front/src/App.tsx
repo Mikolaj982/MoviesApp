@@ -40,7 +40,7 @@ export const App = () => {
                 headers: {
                     'Content-type': 'application/json',
                     Accept: 'application/json',
-                    Authorization: 'Bearer 1056|JYIixR7l5vtlrWObMR4oYOAODOjaYkatYQGyu9lE',
+                    Authorization: 'Bearer 1089|2BPRi2srmcFSy1K4A14wun6eiTW7bddstpsFYkwn356a9f74',
                 }
             })
                 .then(res => res.json()
